@@ -1,0 +1,4 @@
+from pyspark import SparkConf, SparkContext
+numbers = sc.parallelize({1,2,3,4,5,6})
+newNumbers = numbers.filter(lambda number: number % 2 == 0)
+newNumbers.collect()
